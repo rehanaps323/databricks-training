@@ -1,0 +1,16 @@
+{
+  "cluster_name": "Databricks-Training-Python",
+  "spark_version": "13.3.x-scala2.12",
+  "node_type_id": "Standard_DS3_v2",
+  "num_workers": 0,
+  "autotermination_minutes": 30,
+  "enable_elastic_disk": true,
+  "data_security_mode": "SINGLE_USER",
+  "single_user_name": "ashaik0713@gmail.com",
+  "spark_conf": {
+    "spark.master": "local[*]"
+  },
+  "azure_attributes": {
+    "availability": "ON_DEMAND"
+  }
+}
