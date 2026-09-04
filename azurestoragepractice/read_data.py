@@ -6,10 +6,10 @@ import io
 account_url = "https://uae.blob.core.windows.net"
 container_name = "rehanadataset"
 blob_name = "ctg-studies.json"
+account_key = dbutils.secrets.get(scope="azure-storage", key="storage-key")
 
 
-credential = DefaultAzureCredential()
-blob_service_client = BlobServiceClient(account_url, credential=credential)
+blob_service_client = BlobServiceClient(account_url, credential=account_key)
 container_client = blob_service_client.get_container_client(container_name)
 
 blob_client = container_client.get_blob_client(blob_name)
